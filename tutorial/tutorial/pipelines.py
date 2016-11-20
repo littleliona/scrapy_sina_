@@ -16,7 +16,8 @@ class SinaPipeline(object):
         link_url = item['link_url']
         file_name = link_url[7:-6].replace('/','_')
         file_name += ".txt"
-        fp = open(item['path']+'/'+file_name, 'w+')
-        fp.write(item['content'])
-        fp.close()
+        if(item['content']):
+            fp = open(item['path']+'/'+file_name, 'w+')
+            fp.write(item['content'])
+            fp.close()
         return item
