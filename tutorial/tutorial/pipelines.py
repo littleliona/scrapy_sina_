@@ -16,7 +16,7 @@ class SinaPipeline(object):
         link_url = item['link_url']
         file_name = link_url[7:-6].replace('/','_')
         file_name += ".txt"
-        if(item['content']):
+        if(sys.getsizeof(item['content'])>=400):
             fp = open(item['path']+'/'+file_name, 'w+')
             fp.write(item['content'])
             fp.close()
