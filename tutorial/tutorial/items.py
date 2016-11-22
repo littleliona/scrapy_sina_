@@ -9,14 +9,11 @@ from scrapy.item import Item, Field
 class TutorialItem(Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-   parent_title = Field()
-   parent_url = Field()
-
+    
    second_title = Field()
    second_url = Field()
    path = Field()
 
-   link_title = Field()
    link_url = Field()
    head= Field()
    content = Field()
